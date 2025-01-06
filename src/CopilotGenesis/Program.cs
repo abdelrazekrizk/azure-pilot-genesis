@@ -5,9 +5,9 @@ using System.Net.Http.Headers;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello Copilot!");
+app.MapGet("/", () => "Hello CopilotGenesis!");
 
-// Make sure you change the App Name below
+// Make sure you change the App Name below  to match the name of your GitHub App
 string yourGitHubAppName = "CopilotGenesis"; // Replace with your actual extension name
 string githubCopilotCompletionsUrl = "https://api.githubcopilot.com/chat/completions";
 
@@ -22,7 +22,7 @@ app.MapPost("/agent", async (
 
     var user = await octokitClient.User.Current();
 
-     // Insert special system messages
+     // Insert special system Messages to welcome the user
     userRequest.Messages.Insert(0, new Message
     {
         Role = "system",
@@ -35,15 +35,15 @@ app.MapPost("/agent", async (
         Content = "You are a professional assistant specializing in Azure services, providing valuable insights and support to users."
     });
 
-    // Use HttpClient to communicate back to Copilot
+    // Use HttpClient to communicate back to CopilotGenesis
     var httpClient = new HttpClient();
     httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", githubToken);
     userRequest.Stream = true;
 
-    // Use Copilot's LLM to generate a response to the user's messages
+    // Use Copilot's LLM to generate a response to the user's Messages
     var copilotLLMResponse = await httpClient.PostAsJsonAsync(githubCopilotCompletionsUrl, userRequest);
 
-    // Stream the response straight back to the user
+    // Stream the response straight back to the userRequest
     var responseStream = await copilotLLMResponse.Content.ReadAsStreamAsync();
     return Results.Stream(responseStream, "application/json");
 });
