@@ -6,16 +6,16 @@ name: .NET
 on:
   push:
     branches: [ "main" ]
-    #paths:
-      #- './src/**' # Only trigger on changes within the src directory
-      #- './src/CopilotGenesis/CopilotGenesis.sln' # Only trigger on changes to the solution file
-      #- './src/CopilotGenesis/CopilotGenesis.csproj' # Only trigger on changes to the project file
+    paths:
+      - './src/**' # Only trigger on changes within the src directory
+      - './src/CopilotGenesis/CopilotGenesis.sln' # Only trigger on changes to the solution file
+      - './src/CopilotGenesis/CopilotGenesis.csproj' # Only trigger on changes to the project file
   pull_request:
     branches: [ "main" ]
-    #paths:
-      #- './src/**'
-      #- './src/CopilotGenesis/CopilotGenesis.sln'
-      #- './src/CopilotGenesis/CopilotGenesis.csproj'
+    paths:
+      - './src/**'
+      - './src/CopilotGenesis/CopilotGenesis.sln'
+      - './src/CopilotGenesis/CopilotGenesis.csproj'
 
 jobs:
   build:
