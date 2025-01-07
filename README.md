@@ -21,7 +21,7 @@
 
 ## Step 1: Building the Extension
 ## Project Structure
-```
+```console
 azure-pilot-genesis
 ├── LICENSE
 ├── README.md
@@ -46,23 +46,23 @@ azure-pilot-genesis
 - .NET SDK 8
 ## Setup Instructions
 1. **Clone the Repository**:
-   ```
+   ```console
    git clone https://github.com/abdelrazekrizk/azure-pilot-genesis.git
    cd src/CopilotGenesis
    ```
 ## Dependency
 Install Packages: open terminal using the .NET CLI to add NuGet packages
 - **DotNetEnv**
-```
+```console
 dotnet add package DotNetEnv --version 3.1.1
 ```
 - **Octokit**
-```
+```console
 dotnet add package Octokit --version 13.0.1
 ```
 
 - **Build the Project:**
-```
+```console
 dotnet build
 ```
 - **Run the Project:**
@@ -77,7 +77,7 @@ Testing your application is a critical step to ensure everything is working as e
 - **Prerequisites**
 
 Ensure the application is running:
-```
+```console
 dotnet run
 ```
 
