@@ -40,6 +40,23 @@ azure-pilot-genesis
         └── new_feature.cs
 ```
 
+## Dependency
+
+- ```python
+DotNetEnv
+```
+
+```console
+dotnet add package DotNetEnv
+
+```
+- ```python
+Octokit
+```
+
+```console
+dotnet add package Octokit
+```
 
 ## Setup Instructions
 - **Build the Project:**
