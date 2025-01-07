@@ -1,5 +1,4 @@
-[![.NET](https://github.com/abdelrazekrizk/azure-pilot-genesis/actions/workflows/dotnet.yml/badge.svg)](https://github.com/abdelrazekrizk/azure-pilot-genesis/actions/workflows/dotnet.yml)
-![NuGet Version](https://img.shields.io/nuget/v/dotnetenv)
+[![.NET](https://github.com/abdelrazekrizk/azure-pilot-genesis/actions/workflows/dotnet.yml/badge.svg)](https://github.com/abdelrazekrizk/azure-pilot-genesis/actions/workflows/dotnet.yml)![NuGet Version](https://img.shields.io/nuget/v/dotnetenv)
 ![NuGet Version](https://img.shields.io/nuget/v/octokit)
 
 
