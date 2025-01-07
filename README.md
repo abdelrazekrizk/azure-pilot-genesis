@@ -1,5 +1,5 @@
 [![.NET](https://github.com/abdelrazekrizk/azure-pilot-genesis/actions/workflows/dotnet.yml/badge.svg)](https://github.com/abdelrazekrizk/azure-pilot-genesis/actions/workflows/dotnet.yml)
-![NuGet Version](https://img.shields.io/nuget/v/dotnetenv) 
+![NuGet Version](https://img.shields.io/nuget/v/dotnetenv)
 ![NuGet Version](https://img.shields.io/nuget/v/octokit)
 
 
@@ -8,19 +8,20 @@
 **CopilotGenesis** is a GitHub extension integrated with Azure services.<p>It acts as a professional assistant specialized in Azure services, providing valuable insights and support to users through GitHub.<p> The extension is built using a .NET Web API and leverages GitHub's Octokit library for interacting with GitHub APIs.
 
 ## Features
-Azure Resource Management: Retrieves and displays a list of Azure resources.
+- Azure Resource Management: Retrieves and displays a list of Azure resources.
+- GitHub Integration
+- Secure Configuration
 
 ## How did we solve the problem?
-We integrated Azure services with GitHub using a .NET Web API and the Octokit library to provide seamless interaction and resource management.
+- We integrated Azure services with GitHub using a .NET Web API and the Octokit library to provide seamless interaction and resource management.
 
-GitHub Integration: Uses GitHub tokens for authentication and interaction.
+- GitHub Integration: Uses GitHub tokens for authentication and interaction.
 
-Secure Configuration: Environment variables managed via a .env file to securely handle sensitive information.
+- Secure Configuration: Environment variables managed via a .env file to securely handle sensitive information.
 
+## Step 1: Building the Extension
 ## Project Structure
-
-
-```markdown
+```
 azure-pilot-genesis
 ├── LICENSE
 ├── README.md
@@ -39,31 +40,55 @@ azure-pilot-genesis
         ├── bin
         └── new_feature.cs
 ```
-
-## Dependency
-
-- ```python
-DotNetEnv
-```
-
-```console
-dotnet add package DotNetEnv
-
-```
-- ```python
-Octokit
-```
-
-```console
-dotnet add package Octokit
-```
-
+## Project Requierment:
+- github account
+- Visual Studio Code
+- .NET SDK 8
 ## Setup Instructions
+1. **Clone the Repository**:
+   ```
+   git clone https://github.com/abdelrazekrizk/azure-pilot-genesis.git
+   cd src/CopilotGenesis
+   ```
+## Dependency
+Install Packages: open terminal using the .NET CLI to add NuGet packages
+- **DotNetEnv**
+```
+dotnet add package DotNetEnv --version 3.1.1
+```
+- **Octokit**
+```
+dotnet add package Octokit --version 13.0.1
+```
+
 - **Build the Project:**
-```console
+```
 dotnet build
 ```
--
+- **Run the Project:**
 ```console
 dotnet run
+```
+
+
+## Testing Instructions:
+Testing your application is a critical step to ensure everything is working as expected.
+
+- **Prerequisites**
+
+Ensure the application is running:
+```
+dotnet run
+```
+
+- **Testing the Root Endpoint**
+
+Open your browser and navigate to:
+```
+http://localhost:5082/
+```
+Expected Response:
+
+```
+Hello CopilotGenesis!
 ```
