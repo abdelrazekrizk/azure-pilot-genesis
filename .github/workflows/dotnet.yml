@@ -14,7 +14,7 @@ on:
     branches: [ "main" ]
     paths:
       - './src/**'
-      - './src/CopilotGenesis/CopilotGenesis.sln''
+      - './src/CopilotGenesis/CopilotGenesis.sln'
       - './src/CopilotGenesis/CopilotGenesis.csproj'
 
 jobs:
