@@ -1,0 +1,36 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - './src/**' # Only trigger on changes within the src directory
+      - './src/CopilotGenesis/CopilotGenesis.sln' # Only trigger on changes to the solution file
+      - './src/CopilotGenesis/CopilotGenesis.csproj' # Only trigger on changes to the project file
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - './src/**'
+      - './src/CopilotGenesis/CopilotGenesis.sln'
+      - './src/CopilotGenesis/CopilotGenesis.csproj'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore ./src/CopilotGenesis/CopilotGenesis.csproj
+    - name: Build
+      run: dotnet build ./src/CopilotGenesis/CopilotGenesis.csproj --no-restore
+    - name: Test
+      run: dotnet test ./src/CopilotGenesis/CopilotGenesis.csproj --no-build --verbosity normal
