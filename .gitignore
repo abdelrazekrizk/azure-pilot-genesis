@@ -3,11 +3,11 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 # GitHub folder
-#.github/**/*
+#.github/
 # Visual Studio Code folder
-.vscode/**/*
+.vscode/
 # azure web site files
-azure-repo/**/*
+azure-repo/
 #temporary files which should be ignored
 temp/
 # Ignore environment file
