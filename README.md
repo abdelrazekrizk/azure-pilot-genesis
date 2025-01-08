@@ -2,6 +2,12 @@
 ![NuGet Version](https://img.shields.io/nuget/v/dotnetenv)
 ![NuGet Version](https://img.shields.io/nuget/v/octokit)
 
+## Accelerate App Development with GitHub Copilot
+
+<img src="./assest/full_width.png" width="1000"/>
+
+
+#### Empowering the Next Generation of Developers with GitHub and Azure
 
 # CopilotGenesis
 ## Overview
@@ -92,3 +98,7 @@ Expected Response:
 ```
 Hello CopilotGenesis!
 ```
+
+
+**License**
+> This project is licensed under the GNU GENERAL PUBLIC Version 3 License.
