@@ -6,10 +6,8 @@
 
 <img src="./assest/full_width.png" width="1000"/>
 
-
-#### Empowering the Next Generation of Developers with GitHub and Azure
-
 # CopilotGenesis
+#### Empowering the Next Generation of Developers with GitHub and Azure
 ## Overview
 **CopilotGenesis** is a GitHub extension integrated with Azure services.<p>It acts as a professional assistant specialized in Azure services, providing valuable insights and support to users through GitHub.<p> The extension is built using a .NET Web API and leverages GitHub's Octokit library for interacting with GitHub APIs.
 
